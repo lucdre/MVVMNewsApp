@@ -27,7 +27,6 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
             loadUrl(article.url)
         }
 
-        //TODO some articles don't save causing crash, maybe because they have no ID
         fab.setOnClickListener {
             viewModel.saveArticle(article)
             Snackbar.make(view, "Article saved successfully", Snackbar.LENGTH_SHORT).show()
